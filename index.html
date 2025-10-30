@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Beatles — Главная</title>
+
+  <!-- Современные шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: radial-gradient(circle at 30% 20%, #2e006d 0%, #090a25 80%);
+      --card-bg: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.1);
+      --accent: #c77dff;
+      --accent2: #7b2ff7;
+      --text: #f1f3f8;
+      --muted: #a0a4b8;
+      --link: #a278ff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Open Sans", system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    /* Навигация */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 14px 22px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+      transition: background 0.3s ease;
+    }
+    .nav a {
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      color: var(--text);
+      opacity: 0.9;
+      transition: color .3s;
+    }
+    .nav a:hover {
+      color: var(--accent);
+    }
+    .nav a[aria-current="page"] {
+      color: var(--accent);
+      text-shadow: 0 0 8px rgba(199,125,255,0.7);
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 60px 0 30px;
+    }
+    .eyebrow {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+    }
+    h1 {
+      font-family: "Raleway", sans-serif;
+      font-size: clamp(28px, 5vw, 56px);
+      margin: 16px 0 0;
+      line-height: 1.2;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Основная карточка */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 34px 38px;
+      margin-top: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      backdrop-filter: blur(16px);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 70px rgba(199,125,255,0.3);
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+      margin: 0 auto 28px;
+      box-shadow: 0 15px 35px rgba(0,0,0,.5);
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    /* Разделитель и футер */
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+      margin: 30px 0;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="nav">
+      <a aria-current="page">Главная</a>
+      <a href="info.html">Общая информация</a>
+      <a href="history.html">История</a>
+      <a href="film.html">Видеография</a>
+      <a href="disc.html">Дискография</a>
+      <a href="links.html">Источники</a>
+      <a href="shop.html">Заказать</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+
+    <header>
+      <div class="eyebrow">The Beatles</div>
+      <h1>Добро пожаловать на сайт, посвящённый легендарной группе</h1>
+    </header>
+
+    <section class="card">
+      <img src="images/Beatles.jpg" alt="The Beatles group photo">
+      <p>Об этой группе написано столько, что вряд ли нам удалось бы добавить что-либо новое. 
+      На нашем сайте вы найдёте историю создания группы, биографии участников, дискографию и фильмографию коллектива.</p>
+
+      <p>Мы предлагаем вашему вниманию только <em>достоверную информацию</em>. 
+      Этот сайт носит <strong>учебный и демонстрационный характер</strong> и создан для отработки технологии разметки HTML-документов.</p>
+
+      <p>Более полную информацию о <em>The Beatles</em> вы сможете найти на других ресурсах. Спасибо за интерес к нашему сайту!</p>
+    </section>
+
+    <div class="divider"></div>
+    <footer>
+      © Все права защищены. The Beatles Website<br>
+      Сайт выполнен в рамках учебной работы по дисциплине "Электронный бизнес" Варанковой Е.В. ММО211-1
+    </footer>
+  </div>
+</body>
+</html>

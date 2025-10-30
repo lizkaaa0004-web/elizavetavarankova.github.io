@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты — The Beatles</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: radial-gradient(circle at 40% 20%, #4b1934 0%, #0b0610 85%);
+      --card-bg: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.1);
+      --accent: #ff8fab;
+      --accent2: #ffc2d1;
+      --text: #f8f8fa;
+      --muted: #b8b8c2;
+      --link: #ffb3c6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Open Sans", system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    /* NAV */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 14px 22px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    }
+    .nav a {
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      color: var(--text);
+      opacity: 0.9;
+      transition: color .3s;
+    }
+    .nav a:hover { color: var(--accent); }
+    .nav a[aria-current="page"] {
+      color: var(--accent);
+      text-shadow: 0 0 8px rgba(255,143,171,0.7);
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 60px 0 30px;
+    }
+    .eyebrow {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+    }
+    h1 {
+      font-family: "Raleway", sans-serif;
+      font-size: clamp(28px, 5vw, 54px);
+      margin: 16px 0 0;
+      line-height: 1.2;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 34px 38px;
+      margin-top: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      backdrop-filter: blur(16px);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 70px rgba(255,143,171,0.25);
+    }
+
+    h2 {
+      color: var(--accent);
+      font-family: "Raleway", sans-serif;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 16px;
+    }
+    .contacts a {
+      color: var(--link);
+      font-weight: 600;
+    }
+    .contacts a:hover {
+      color: var(--accent2);
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+      margin: 30px 0;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="info.html">Общая информация</a>
+      <a href="history.html">История</a>
+      <a href="film.html">Видеография</a>
+      <a href="disc.html">Дискография</a>
+      <a href="links.html">Источники</a>
+      <a aria-current="page">Контакты</a>
+    </nav>
+
+    <header>
+      <div class="eyebrow">The Beatles</div>
+      <h1>Контакты</h1>
+    </header>
+
+    <section class="card">
+      <h2>Связаться с автором сайта</h2>
+      <div class="contacts">
+        <p>Если у вас есть вопросы по сайту или пожелания, свяжитесь со мной удобным способом:</p>
+        <p>📧 Email: <a href="mailto:lizkaaa.0004@gmail.com">lizkaaa.0004@gmail.com</a></p>
+        <p>💬 Telegram: <a href="https://t.me/+SXMn_Wx3kuBmYjli" target="_blank">https://t.me/+SXMn_Wx3kuBmYjli</a></p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+    <footer>
+      © Все права защищены. The Beatles Contact<br>
+      Сайт выполнен в рамках учебной работы по дисциплине "Электронный бизнес" Варанковой Е.В. ММО211-1
+    </footer>
+  </div>
+</body>
+</html>

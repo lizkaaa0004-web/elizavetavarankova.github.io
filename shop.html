@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Заказать — The Beatles</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: radial-gradient(circle at 25% 20%, #4a0e0e 0%, #0b0606 85%);
+      --card-bg: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.1);
+      --accent: #ff6b6b;
+      --accent2: #ffc8c8;
+      --text: #f1f3f8;
+      --muted: #a0a4b8;
+      --link: #ffaaaa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Open Sans", system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    /* NAV */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 14px 22px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    }
+    .nav a {
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      color: var(--text);
+      opacity: 0.9;
+      transition: color .3s;
+    }
+    .nav a:hover { color: var(--accent); }
+    .nav a[aria-current="page"] {
+      color: var(--accent);
+      text-shadow: 0 0 8px rgba(255,107,107,0.7);
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 60px 0 30px;
+    }
+    .eyebrow {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+    }
+    h1 {
+      font-family: "Raleway", sans-serif;
+      font-size: clamp(28px, 5vw, 54px);
+      margin: 16px 0 0;
+      line-height: 1.2;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 34px 38px;
+      margin-top: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      backdrop-filter: blur(16px);
+      transition: transform .3s ease, box-shadow .3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 70px rgba(255,107,107,0.25);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 18px;
+      margin: 0 auto 28px;
+      box-shadow: 0 15px 35px rgba(0,0,0,.5);
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    iframe {
+      border-radius: 12px;
+      border: none;
+      width: 100%;
+      height: 720px;
+      margin-top: 20px;
+      box-shadow: 0 0 25px rgba(255,107,107,0.25);
+    }
+
+    .note {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 28px;
+      text-align: left;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+      margin: 30px 0;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="info.html">Общая информация</a>
+      <a href="history.html">История</a>
+      <a href="film.html">Видеография</a>
+      <a href="disc.html">Дискография</a>
+      <a href="links.html">Источники</a>
+      <a aria-current="page">Заказать</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+
+    <header>
+      <div class="eyebrow">The Beatles</div>
+      <h1>Заказать</h1>
+    </header>
+
+    <section class="card">
+      <img src="images/order.jpg" alt="The Beatles order">
+
+      <p>Здесь вы можете оформить заказ на сувенирную продукцию, посвящённую группе <strong>The Beatles</strong> — постеры, виниловые пластинки и другие памятные товары.</p>
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSed36IahxaG0d70w4tom7JVmIcY8868bSmHoETTXtfgUusi9A/viewform?embedded=true" loading="lazy">Загрузка…</iframe>
+
+      <div class="note">
+        <p>Это учебная страница. Её цель — отработка навыков HTML и встраивания внешних сервисов. Реальные заказы не принимаются 🙂</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+    <footer>
+      © Все права защищены. The Beatles Order Page<br>
+      Сайт выполнен в рамках учебной работы по дисциплине "Электронный бизнес" Варанковой Е.В. ММО211-1
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Видеография — The Beatles</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: radial-gradient(circle at 30% 20%, #2c006d 0%, #060712 80%);
+      --card-bg: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.1);
+      --accent: #9d4edd;
+      --accent2: #5a00c7;
+      --text: #f1f3f8;
+      --muted: #a0a4b8;
+      --link: #c6a7ff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Open Sans", system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    /* NAV */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 14px 22px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    }
+    .nav a {
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      color: var(--text);
+      opacity: 0.9;
+      transition: color .3s;
+    }
+    .nav a:hover { color: var(--accent); }
+    .nav a[aria-current="page"] {
+      color: var(--accent);
+      text-shadow: 0 0 8px rgba(157,78,221,0.7);
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 60px 0 30px;
+    }
+    .eyebrow {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+    }
+    h1 {
+      font-family: "Raleway", sans-serif;
+      font-size: clamp(28px, 5vw, 54px);
+      margin: 16px 0 0;
+      line-height: 1.2;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 34px 38px;
+      margin-top: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      backdrop-filter: blur(16px);
+      transition: transform .3s ease, box-shadow .3s ease;
+      overflow-x: auto;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 70px rgba(157,78,221,0.25);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+    th, td {
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 10px 12px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background: rgba(157,78,221,.2);
+      color: var(--accent);
+      font-weight: 700;
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,.03);
+    }
+    tr:hover td {
+      background: rgba(157,78,221,.08);
+      transition: background .2s ease;
+    }
+    img {
+      border-radius: 8px;
+      max-width: 120px;
+      height: auto;
+      box-shadow: 0 6px 20px rgba(0,0,0,.3);
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+      margin: 30px 0;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="info.html">Общая информация</a>
+      <a href="history.html">История</a>
+      <a aria-current="page">Видеография</a>
+      <a href="disc.html">Дискография</a>
+      <a href="links.html">Источники</a>
+      <a href="shop.html">Заказать</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+
+    <header>
+      <div class="eyebrow">The Beatles</div>
+      <h1>Видеография</h1>
+    </header>
+
+    <section class="card">
+      <table>
+        <tr>
+          <th>Год</th>
+          <th>Русское название</th>
+          <th>Оригинальное название</th>
+          <th>Афиша</th>
+          <th>Тип</th>
+        </tr>
+        <tr>
+          <td>1964</td>
+          <td>Вечер трудного дня</td>
+          <td>A Hard Day’s Night</td>
+          <td><img src="images/film1.jpg" alt="A Hard Day’s Night"></td>
+          <td>Х/ф</td>
+        </tr>
+        <tr>
+          <td>1965</td>
+          <td>На помощь!</td>
+          <td>Help!</td>
+          <td><img src="images/film2.jpg" alt="Help!"></td>
+          <td>Х/ф</td>
+        </tr>
+        <tr>
+          <td>1967</td>
+          <td>Волшебное таинственное путешествие</td>
+          <td>Magical Mystery Tour</td>
+          <td><img src="images/film3.jpg" alt="Magical Mystery Tour"></td>
+          <td>Х/ф</td>
+        </tr>
+        <tr>
+          <td>1968</td>
+          <td>Жёлтая подводная лодка</td>
+          <td>Yellow Submarine</td>
+          <td><img src="images/film4.jpg" alt="Yellow Submarine"></td>
+          <td>М/ф</td>
+        </tr>
+        <tr>
+          <td>1970</td>
+          <td>Пусть будет так</td>
+          <td>Let It Be</td>
+          <td><img src="images/film5.jpg" alt="Let It Be"></td>
+          <td>Д/ф</td>
+        </tr>
+      </table>
+    </section>
+
+    <div class="divider"></div>
+    <footer>
+      © Все права защищены. The Beatles Videography<br>
+      Сайт выполнен в рамках учебной работы по дисциплине "Электронный бизнес" Варанковой Е.В. ММО211-1
+    </footer>
+  </div>
+</body>
+</html>
